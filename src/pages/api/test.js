@@ -19,8 +19,8 @@ export default apiRoutesHandler(
       //   path: 'test2',
       //   populate: { path: 'test3' },
       // })
-
-      const testData = await User.findById('5fa50faf6bff5600088fa9e7')
+      const id = '5fa50faf6bff5600088fa9e7'
+      const testData = await User.find().populate('orders')
       return res.json({ testData })
     },
   })

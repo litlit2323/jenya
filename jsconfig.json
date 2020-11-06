@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["./src/components/*"],
+      "@models/*": ["./src/models/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@hocs/*": ["./src/hocs/*"],
+      "@providers/*": ["./src/hocs/*"],
+      "@validation/*": ["./src/validation/*"],
+      "@images/*": ["./images/*"],
+      "@root/*": ["./*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}

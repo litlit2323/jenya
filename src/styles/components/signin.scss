@@ -1,0 +1,13 @@
+$logo-size: 80px;
+
+.logo {
+  display: inline-block;
+  vertical-align: middle;
+  background-size: contain;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  height: $logo-size;
+  width: $logo-size;
+  background-image: url(https://avatars.mds.yandex.net/get-altay/1971563/2a0000016c1da587fca6083e0f4e0d96b650/h300);
+}

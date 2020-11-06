@@ -1,0 +1,13 @@
+$colore: rgb(105, 204, 208);
+.admin-nav{
+
+
+  justify-items: center;
+  height: 100%;
+  @media (min-width: 768px) {
+    height: 100vh;
+    border-right: 1px  $colore solid;
+  }
+
+}
+

@@ -3,6 +3,7 @@ import apiRoutesHandler from '@utils/apiRoutesHandler'
 import TestModel from './../../models/TestModel'
 import TestModel2 from './../../models/TestModel2'
 import TestModel3 from './../../models/TestModel3'
+import User from './../../models/User'
 
 export default apiRoutesHandler(
   withDb({

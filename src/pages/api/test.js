@@ -25,6 +25,7 @@ export default apiRoutesHandler(
       // })
       const id = '5fa50faf6bff5600088fa9e7'
       const user = await User.findById(id)
+      user.test2 = []
       user.test2.addToSet(test2.id)
       user.test2.addToSet(test22.id)
       await user.save()

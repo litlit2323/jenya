@@ -16,7 +16,7 @@ export default apiRoutesHandler(
       const testData = new TestModel({
         title: 'Test title aaa',
       })
-      testData.save()
+      await testData.save()
       return res.json({ testData })
     },
   })

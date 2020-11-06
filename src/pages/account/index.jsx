@@ -134,8 +134,8 @@ const Account = ({ user }) => {
     fetchUser()
   }, [])
 
-  useEffect(async () => {
-    await fetchData()
+  useEffect(() => {
+    fetchData()
   }, [page, sizePerPage])
 
   if (!user || user.isLoggedIn === false) {

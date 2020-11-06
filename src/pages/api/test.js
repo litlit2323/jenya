@@ -4,6 +4,7 @@ import TestModel from './../../models/TestModel'
 import TestModel2 from './../../models/TestModel2'
 import TestModel3 from './../../models/TestModel3'
 import User from './../../models/User'
+import Order from './../../models/Order'
 
 export default apiRoutesHandler(
   withDb({
@@ -34,7 +35,7 @@ export default apiRoutesHandler(
       // // user.test2.addToSet(test22.id)
       // // await user.save()
 
-      const testData = await User.find().populate('orders')
+      const testData = await User.find().populate('orders', Order)
       return res.json({ testData })
     },
   })

@@ -3,6 +3,10 @@ const mongoose = require('mongoose')
 const TestSchema = new mongoose.Schema(
   {
     title: String,
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+    },
     test3: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'TestModel3',

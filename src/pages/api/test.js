@@ -14,7 +14,9 @@ export default apiRoutesHandler(
       const test1 = new TestModel({ title: 'test1 title', test2: test2.id })
       await test1.save()
 
-      const testData = await TestModel.find().populate('test2', ['test3'])
+      const testData = await TestModel.find()
+        .populate('test2')
+        .populate('test3')
       return res.json({ testData })
     },
   })

@@ -30,7 +30,10 @@ export default apiRoutesHandler(
       user.test2.addToSet(test22.id)
       await user.save()
 
-      const testData = await User.find().populate('test2')
+      const testData = await User.find().populate({
+        path: 'test2',
+        populate: { path: 'test3' },
+      })
       return res.json({ testData })
     },
   })

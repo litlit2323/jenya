@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "node server.js",
-    "build": "next build",
-    "start": "cross-env NODE_ENV=production node server.js"
+    "build": "node mongorun.js && next build",
+    "start": "cross-env NODE_ENV=production node server.js",
+    "nstart": "next start"
   },
   "dependencies": {
     "@hookform/error-message": "^0.0.4",

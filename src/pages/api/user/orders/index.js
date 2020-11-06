@@ -54,14 +54,16 @@ export default apiRoutesHandler(
         const toSkip = (pageNumber - 1) * pagination
 
         const user = await User.findById(userSession.userId).populate({
-          path: 'orders',
           select: '_id title createdAt status price',
           options: {
             sort: { createdAt: -1 },
             skip: toSkip,
           },
+          path: 'orders',
+          model: Order,
           populate: {
             path: 'status',
+            model: OrderStatus,
           },
         })
 

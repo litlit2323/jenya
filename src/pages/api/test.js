@@ -40,7 +40,10 @@ export default apiRoutesHandler(
       const testData = await User.find().populate({
         path: 'orders',
         model: Order,
-        populate: { path: 'status', model: OrderStatus },
+        populate: {
+          path: 'status',
+          model: OrderStatus,
+        },
       })
       return res.json({ testData })
     },

@@ -5,6 +5,7 @@ import TestModel2 from './../../models/TestModel2'
 import TestModel3 from './../../models/TestModel3'
 import User from './../../models/User'
 import Order from './../../models/Order'
+import OrderStatus from './../../models/OrderStatus'
 
 export default apiRoutesHandler(
   withDb({
@@ -34,8 +35,13 @@ export default apiRoutesHandler(
       // // user.test2.addToSet(test2.id)
       // // user.test2.addToSet(test22.id)
       // // await user.save()
-
-      const testData = await User.find().populate('orders', Order)
+      // { path: 'created_by', model: Order }
+      // const testData = await User.find().populate('orders', Order)
+      const testData = await User.find().populate({
+        path: 'orders',
+        model: Order,
+        populate: { path: 'status', model: OrderStatus },
+      })
       return res.json({ testData })
     },
   })

@@ -52,6 +52,12 @@ const UserSchema = new mongoose.Schema(
         ref: 'Permission',
       },
     ],
+    test2: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'TestModel2',
+      },
+    ],
   },
   {
     timestamps: true,

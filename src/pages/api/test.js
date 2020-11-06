@@ -20,11 +20,7 @@ export default apiRoutesHandler(
       //   populate: { path: 'test3' },
       // })
 
-      const testData = await User.findById('5fa50faf6bff5600088fa9e7').populate(
-        {
-          path: 'orders',
-        }
-      )
+      const testData = await User.findById('5fa50faf6bff5600088fa9e7')
       return res.json({ testData })
     },
   })

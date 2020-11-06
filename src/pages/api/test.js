@@ -23,9 +23,6 @@ export default apiRoutesHandler(
       const testData = await User.findById('5fa50faf6bff5600088fa9e7').populate(
         {
           path: 'orders',
-          populate: {
-            path: 'status',
-          },
         }
       )
       return res.json({ testData })

@@ -3,9 +3,9 @@ const mongoose = require('mongoose')
 const TestSchema = new mongoose.Schema(
   {
     title: String,
-    test2: {
+    test3: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'TestModel2',
+      ref: 'TestModel3',
     },
   },
   {
@@ -14,4 +14,4 @@ const TestSchema = new mongoose.Schema(
 )
 
 module.exports =
-  mongoose.models.TestModel || mongoose.model('TestModel', TestSchema)
+  mongoose.models.TestModel2 || mongoose.model('TestModel2', TestSchema)
